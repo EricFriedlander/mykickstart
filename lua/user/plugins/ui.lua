@@ -36,6 +36,10 @@ require('which-key').setup {
     { '<leader>t', group = '[T]oggle' },
     { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
     { 'gr', group = 'LSP Actions', mode = { 'n' } },
+    { '<leader>r', group = '[R]un (quarto cell)' },
+    { '<leader>c', group = '[C]ode / terminal' },
+    { '<leader>q', group = '[Q]uarto' },
+    { '<leader>i', group = '[I]nsert' },
   },
 }
 
