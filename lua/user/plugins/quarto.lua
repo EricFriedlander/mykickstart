@@ -92,3 +92,33 @@ require('jupytext').setup {
     r = { extension = 'qmd', style = 'quarto', force_ft = 'quarto' },
   },
 }
+
+-- paste an image from the clipboard or drag-and-drop
+vim.pack.add{ gh 'HakonHarnes/img-clip.nvim' }
+require('img-clip').setup{ 
+  default = {
+    dir_path = 'images',
+    drag_and_drop = {
+      enabled = true,
+      insert_mode = false,
+    },
+  filetypes = {
+    markdown = {
+      url_encode_path = true,
+      template = '![$CURSOR]($FILE_PATH)',
+      drag_and_drop = {
+        download_images = false,
+      },
+    },
+    quarto = {
+      url_encode_path = true,
+      template = '![$CURSOR]($FILE_PATH)',
+      drag_and_drop = {
+        download_images = false,
+        },
+     },
+   },
+  },
+}
+
+vim.keymap.set('n', '<leader>p', ':PasteImage<cr>', { desc = 'insert [i]mage from clipboard'})

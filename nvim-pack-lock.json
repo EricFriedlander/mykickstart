@@ -58,6 +58,10 @@
       "rev": "264b5c8fc6e82212af0dc5c345145cfa916efeb6",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "moonfly": {
+      "rev": "261664f92ed51cf0c077555b2d4b2530307eac17",
+      "src": "https://github.com/bluz71/vim-moonfly-colors"
+    },
     "nabla.nvim": {
       "rev": "9b69b709063ccf40ac36fabb4fff7d90b3736475",
       "src": "https://github.com/jbyuki/nabla.nvim"
