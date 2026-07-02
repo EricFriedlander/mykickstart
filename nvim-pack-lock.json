@@ -136,6 +136,10 @@
       "rev": "a42018776a293294acc42f91fba1cd5d9e6deabc",
       "src": "https://github.com/S-Sigdel/vimhjkl"
     },
+    "vimtex": {
+      "rev": "5e6a06f5cec5ede3dc6ba045ef6eda13b6dccb1f",
+      "src": "https://github.com/lervag/vimtex"
+    },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
       "src": "https://github.com/folke/which-key.nvim"

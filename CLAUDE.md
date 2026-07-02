@@ -55,6 +55,7 @@ uncommenting. A health check is exposed via `lua/user/health.lua`
 | `completion.lua` | blink.cmp (autocomplete) + LuaSnip (snippets) |
 | `treesitter.lua` | nvim-treesitter; auto-installs parsers on `FileType`; base parsers pre-installed |
 | `quarto.lua` | quarto-nvim + otter.nvim (LSP in code cells), vim-slime (REPL execution), img-clip (`<leader>ii`), nabla (`<leader>qm`), jupytext (.ipynb → .qmd, needs `pip install jupytext`); cell-runner keymaps (`<localleader>r*`) wired via `FileType` autocmd |
+| `vimtex.lua` | LaTeX authoring: latexmk compilation, zathura PDF preview with forward/inverse SyncTeX search, conceal disabled; `vim.g.vimtex_*` globals set before `vim.pack.add` since it's a Vimscript plugin |
 | `indent_line.lua` | indent guides — **on by default** |
 | `neo-tree.lua` | file explorer (`\` to open) — **on by default** |
 | `debug.lua` | DAP debugging — opt-in |

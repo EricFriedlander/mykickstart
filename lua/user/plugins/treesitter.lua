@@ -40,6 +40,8 @@ vim.api.nvim_create_autocmd('FileType', {
 
     local language = vim.treesitter.language.get_lang(filetype)
     if not language then return end
+    -- VimTeX owns LaTeX highlighting; skip treesitter for tex/latex to avoid conflicts
+    if language == 'latex' then return end
 
     local installed_parsers = require('nvim-treesitter').get_installed 'parsers'
 

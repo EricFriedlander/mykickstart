@@ -22,12 +22,46 @@ require('conform').setup {
   },
   -- You can also specify external formatters in here.
   formatters_by_ft = {
+    lua = { 'stylua' },
     -- rust = { 'rustfmt' },
     -- Conform can also run multiple formatters sequentially
-    -- python = { "isort", "black" },
+    python = { 'isort', 'black' },
+    quarto = { 'injected' },
+    markdown = { 'injected' },
+    r = { 'styler' },
     --
     -- You can use 'stop_after_first' to run the first available formatter from the list
     -- javascript = { "prettierd", "prettier", stop_after_first = true },
+  },
+}
+
+-- Customize the "injected" formatter
+require('conform').formatters.injected = {
+  -- Set the options field
+  options = {
+    -- Set to true to ignore errors
+    ignore_errors = false,
+    -- Map of treesitter language to file extension
+    -- A temporary file name with this extension will be generated during formatting
+    -- because some formatters care about the filename.
+    lang_to_ext = {
+      bash = 'sh',
+      c_sharp = 'cs',
+      elixir = 'exs',
+      javascript = 'js',
+      julia = 'jl',
+      latex = 'tex',
+      markdown = 'md',
+      python = 'py',
+      ruby = 'rb',
+      rust = 'rs',
+      teal = 'tl',
+      r = 'r',
+      typescript = 'ts',
+    },
+    -- Map of treesitter language to formatters to use
+    -- (defaults to the value from formatters_by_ft)
+    lang_to_formatters = {},
   },
 }
 
