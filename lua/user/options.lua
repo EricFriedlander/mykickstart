@@ -96,3 +96,7 @@ vim.diagnostic.config {
     end,
   },
 }
+
+
+-- Turn on spell check
+vim.opt.spell = true

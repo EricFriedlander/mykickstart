@@ -6,10 +6,16 @@
 local gh = require('user.util').gh
 
 -- NOTE: You can also specify a branch or a specific commit
-vim.pack.add { { src = gh 'nvim-treesitter/nvim-treesitter', version = 'main' } }
+vim.pack.add {gh 'neovim-treesitter/treesitter-parser-registry',
+  {
+    src = gh 'nvim-treesitter/nvim-treesitter',
+    version = 'main'
+  }
+}
+
 
 -- Ensure basic parsers are installed
-local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'r', 'python', 'julia' }
 require('nvim-treesitter').install(parsers)
 
 ---@param buf integer

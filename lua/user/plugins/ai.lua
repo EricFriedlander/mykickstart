@@ -1,8 +1,6 @@
 local gh = require('user.util').gh
 
-vim.pack.add { gh 'folke/snacks.nvim', gh 'coder/claudecode.nvim' }
-
-require('snacks').setup {}
+vim.pack.add { gh 'coder/claudecode.nvim' }
 
 require('claudecode').setup {}
 

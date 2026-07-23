@@ -24,4 +24,5 @@ require 'user.plugins.neo-tree'
 -- Personal plugins
 require 'user.plugins.quarto'
 require 'user.plugins.ai'
+require 'user.plugins.snacks'
 require 'user.plugins.vimtex'
