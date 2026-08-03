@@ -48,5 +48,10 @@ vim.api.nvim_create_autocmd('PackChanged', {
       vim.cmd 'TSUpdate'
       return
     end
+
+    if name == 'molten-nvim' and (kind == 'install' or kind == 'update') then
+      vim.cmd 'UpdateRemotePlugins'
+    end
+
   end,
 })

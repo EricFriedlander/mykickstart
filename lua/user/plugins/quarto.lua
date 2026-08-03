@@ -32,7 +32,7 @@ require('quarto').setup {
   },
   codeRunner = {
     enabled = true,
-    default_method = 'slime',
+    default_method = 'molten',
   },
 }
 

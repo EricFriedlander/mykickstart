@@ -14,6 +14,7 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal.
 vim.g.have_nerd_font = true
 
+require 'user.local'   -- point to local stuff
 require 'user.options' -- vim.o settings + vim.diagnostic.config
 require 'user.keymaps' -- non-plugin keymaps
 require 'user.autocmds' -- yank-highlight + vim.pack build hooks (must come before plugins)

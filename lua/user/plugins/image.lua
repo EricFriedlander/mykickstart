@@ -1,13 +1,10 @@
 -- Install image
 local gh = require('user.util').gh
 
-vim.pack.add({ gh "3rd/image.nvim", build = false,
-	opts = {
-	processor = "magick_cli"
-	}
-})
+vim.pack.add({gh "3rd/image.nvim"})
 
 require("image").setup({
+	processor = "magick_cli",
   backend = "kitty", -- Kitty will provide the best experience, but you need a compatible terminal
   max_width = 100, -- tweak to preference
   max_height = 12, -- ^

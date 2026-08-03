@@ -22,6 +22,9 @@ require 'user.plugins.neo-tree'
 -- require 'user.plugins.gitsigns' -- adds gitsigns recommended keymaps
 
 -- Personal plugins
+require 'user.plugins.image'
+require 'user.plugins.molten'
+require 'user.plugins.vimtex'
 require 'user.plugins.quarto'
 require 'user.plugins.ai'
 require 'user.plugins.snacks'
